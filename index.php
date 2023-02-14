@@ -63,7 +63,6 @@
 <?php
 
 include "empleado.php";
-$_SESSION['listaEmpleados'] = array();
 
 session_start();
 
