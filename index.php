@@ -65,6 +65,10 @@
 include "empleado.php";
 
 session_start();
+    
+if(!isset($_SESSION['listaEmpleados'])){
+    $_SESSION['listaEmpleados'] = [];
+}
 
 if (isset($_POST['btn'])){
     if (isset($_POST['txtNombre']) && !empty ($_POST['txtNombre']) && isset($_POST['txtApellido']) && !empty ($_POST['txtApellido']) && isset($_POST['txtEdad']) && !empty ($_POST['txtEdad']) && isset($_POST['btnGenero'])  && !empty ($_POST['btnGenero']) && isset($_POST['btnEstadoC'])  && !empty ($_POST['btnEstadoC']) && isset($_POST['rangeSueldo']) && !empty ($_POST['rangeSueldo'])){
